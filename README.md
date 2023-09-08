@@ -11,8 +11,7 @@ docker build . \
 --tag aartintelligent/app-php:latest \
 --build-arg "UID=$(id -u)" \
 --build-arg "GID=$(id -g)" \
---build-arg "GIT_COMMIT=$(git rev-parse HEAD)" \
---no-cache
+--build-arg "GIT_COMMIT=$(git rev-parse HEAD)"
 ```
 
 ```shell
@@ -21,8 +20,7 @@ docker build . \
 --build-arg "UID=$(id -u)" \
 --build-arg "GID=$(id -g)" \
 --build-arg "GIT_COMMIT=$(git rev-parse HEAD)" \
---build-arg 'PHP_VERSION=8.2' \
---no-cache
+--build-arg 'PHP_VERSION=8.2'
 ```
 
 ```shell
@@ -31,8 +29,7 @@ docker build . \
 --build-arg "UID=$(id -u)" \
 --build-arg "GID=$(id -g)" \
 --build-arg "GIT_COMMIT=$(git rev-parse HEAD)" \
---build-arg 'PHP_VERSION=8.1' \
---no-cache
+--build-arg 'PHP_VERSION=8.1'
 ```
 
 ```shell
