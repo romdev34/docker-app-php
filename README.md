@@ -1,9 +1,5 @@
 # App PHP
 
-@todo description
-
----
-
 ### Usage
 
 ```shell
