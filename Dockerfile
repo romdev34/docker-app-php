@@ -1,4 +1,4 @@
-FROM aartintelligent/app-nginx:latest
+FROM ulysse699/app-nginx:latest
 
 USER root
 
