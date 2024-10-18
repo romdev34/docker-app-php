@@ -4,7 +4,7 @@
 
 ```shell
 docker build . \
---tag aartintelligent/app-php:latest \
+--tag ulysse699/app-php:latest \
 --build-arg "UID=$(id -u)" \
 --build-arg "GID=$(id -g)" \
 --build-arg "GIT_COMMIT=$(git rev-parse HEAD)"
@@ -12,7 +12,7 @@ docker build . \
 
 ```shell
 docker build . \
---tag aartintelligent/app-php:8.2 \
+--tag ulysse699/app-php:8.2 \
 --build-arg "UID=$(id -u)" \
 --build-arg "GID=$(id -g)" \
 --build-arg "GIT_COMMIT=$(git rev-parse HEAD)" \
@@ -21,7 +21,7 @@ docker build . \
 
 ```shell
 docker build . \
---tag aartintelligent/app-php:8.1 \
+--tag ulysse699/app-php:8.1 \
 --build-arg "UID=$(id -u)" \
 --build-arg "GID=$(id -g)" \
 --build-arg "GIT_COMMIT=$(git rev-parse HEAD)" \
