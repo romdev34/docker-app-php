@@ -76,6 +76,9 @@ apt-get update \
 && wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add - \
 && echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list
 
+RUN wget -q https://getcomposer.org/download/latest-stable/composer.phar; \
+mv composer.phar /usr/bin/composer
+
 RUN set -eux; \
 apt-get update \
 && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -118,6 +121,7 @@ mkdir -p \
 /var/lib/php/sessions \
 /var/log/opcache \
 /var/lock/opcache \
+/var/cache/composer \
 /var/cache/opcache; \
 cp -r \
 /etc/php-z/* \
@@ -125,6 +129,7 @@ cp -r \
 chmod 777 -R \
 /etc/php \
 /var/lib/php/sessions \
+/var/cache/composer \
 /var/log/opcache \
 /var/lock/opcache \
 /var/cache/opcache; \
@@ -152,6 +157,7 @@ echo "/docker/d-bootstrap-php.sh" >> /docker/d-bootstrap.list; \
 echo "/docker/d-bootstrap-fpm.sh" >> /docker/d-bootstrap.list; \
 chmod +x \
 /docker/d-bootstrap-php.sh \
+/usr/bin/composer \
 /docker/d-bootstrap-fpm.sh
 
 USER rootless
