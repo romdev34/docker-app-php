@@ -85,13 +85,13 @@ docker rm app-php
 ```
 
 ```shell
-docker push aartintelligent/app-php:8.1
+docker push ulysse699/app-php:8.1
 ```
 
 ```shell
-docker push aartintelligent/app-php:8.2
+docker push ulysse699/app-php:8.2
 ```
 
 ```shell
-docker push aartintelligent/app-php:latest
+docker push ulysse699/app-php:latest
 ```
