@@ -10,7 +10,6 @@ PHP_MEMORY_LIMIT="2048M" \
 PHP_MAX_EXECUTION_TIME="18000" \
 PHP_REALPATH_CACHE_SIZE="4096K" \
 PHP_REALPATH_CACHE_TTL="600" \
-PHP_SENDMAIL_PATH="/usr/sbin/sendmail -t -i" \
 PHP_XDEBUG__MODE="off" \
 PHP_XDEBUG__CLIENT_PORT="9003" \
 PHP_XDEBUG__CLIENT_HOST="172.17.0.1" \
@@ -106,12 +105,6 @@ php${PHP_VERSION}-ftp \
 php${PHP_VERSION}-ldap \
 php${PHP_VERSION}-zip
 
-# Specificity to send emails on test environments via mailhog
-# PHP_SENDMAIL_PATH="/usr/sbin/sendmail-local -t fake@mail.local --smtp-addr=mailhog:1025"
-RUN set -eux; \
-wget -q https://github.com/mailhog/mhsendmail/releases/download/v0.2.0/mhsendmail_linux_amd64; \
-mv mhsendmail_linux_amd64 /usr/sbin/sendmail-local; \
-chmod +x /usr/sbin/sendmail-local
 
 COPY --chown=rootless:rootless system /
 
