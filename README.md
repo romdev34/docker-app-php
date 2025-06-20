@@ -85,10 +85,6 @@ docker rm app-php
 ```
 
 ```shell
-docker push ulysse699/app-php:8.1
-```
-
-```shell
 docker push ulysse699/app-php:8.2
 ```
 
